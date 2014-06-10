@@ -1,4 +1,4 @@
-package com.cgi.mobility.filePlugin;
+package com.howiepowie.cordova.filePlugin;
 
 import java.io.File;
 import java.io.FileNotFoundException;
