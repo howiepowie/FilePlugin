@@ -20,7 +20,7 @@
                 <param name="android-package" value="com.howiepowie.cordova.filePlugin.FileWriterFromBase64"/>
             </feature>
         </config-file>
- 
-        <source-file src="src/FileWriterFromBase64.java" target-dir="src/com/howiepowie/cordova/filePlugin/FileWriterFromBase64" />     
+
+        <source-file src="src/FileWriterFromBase64.java" target-dir="src/com/howiepowie/cordova/filePlugin" />     
      </platform>         
 </plugin>
