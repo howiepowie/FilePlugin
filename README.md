@@ -3,6 +3,6 @@ FilePlugin
 
 [WIP] File writer and opener plugin for cordova (Android)
 
-This cordova plugin permit to write file (internally and externaly) and open it.
+You can drive your file from your cordova apps.
 
 Planning only for android (Maybe WP8). 
