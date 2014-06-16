@@ -32,20 +32,19 @@ public class FileWriterFromBase64 extends CordovaPlugin {
 	public boolean execute(String action, JSONArray args, CallbackContext callbackcontext) throws JSONException {
 		JSONObject arg = args.getJSONObject(0);
 		
-		switch (action) {
-		case WRITE_FILE:
+		if(action.equals(WRITE_FILE))
 			return writefile(arg.getString("data"), arg.getString("filepath"), callbackcontext);
-		case OPEN_FILE:
+		else if(action.equals(OPEN_FILE))
 			return openfile(arg.getString("filepath"),arg.getString("content_type") , callbackcontext);
-		case DELETE_FILE:
+		else if(action.equals(DELETE_FILE))
 			return deletefile(arg.getString("filepath"), callbackcontext);
-		case CREATE_DIRECTORY:
+		else if(action.equals(CREATE_DIRECTORY))
 			return createdirectory(arg.getString("filepath"), callbackcontext);
-		case DELETE_DIRECTORY:
+		else if(action.equals(DELETE_DIRECTORY))
 			return deletedirectory(arg.getString("filepath"), arg.getBoolean("recursif"), callbackcontext);
-		case GET_EXTERNAL_DIRECTORY:
+		else if(action.equals(GET_EXTERNAL_DIRECTORY))
 			return getExternalPath(callbackcontext);
-		default:
+		else {
 			callbackcontext.error("Unknown action");
 			return false;
 		}

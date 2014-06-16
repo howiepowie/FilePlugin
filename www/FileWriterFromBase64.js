@@ -10,7 +10,7 @@ var FileWriterFromBase64 = {
  				"filepath" : filepath
  			}]
  		);
-    }
+    },
     openFile: function(filepath, content_type, successCallback, errorCallback) {
  		cordova.exec(
  			successCallback,
@@ -22,7 +22,7 @@ var FileWriterFromBase64 = {
  				"filepath" : filepath
  			}]
  		);
-    }
+    },
     deleteFile: function(filepath, successCallback, errorCallback) {
  		cordova.exec(
  			successCallback,
@@ -33,7 +33,7 @@ var FileWriterFromBase64 = {
  				"filepath" : filepath
  			}]
  		);
-    }
+    },
     createDirectory: function(filepath, successCallback, errorCallback) {
  		cordova.exec(
  			successCallback,
@@ -44,7 +44,7 @@ var FileWriterFromBase64 = {
  				"filepath" : filepath
  			}]
  		);
-    }
+    },
     deleteDirectory: function(filepath, successCallback, errorCallback) {
  		cordova.exec(
  			successCallback,
@@ -55,8 +55,8 @@ var FileWriterFromBase64 = {
  				"filepath" : filepath
  			}]
  		);
-    }
-    deleteFile: function(successCallback, errorCallback) {
+    },
+    externalDirectory: function(successCallback, errorCallback) {
  		cordova.exec(
  			successCallback,
  			errorCallback,
