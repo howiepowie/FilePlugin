@@ -21,6 +21,6 @@
             </feature>
         </config-file>
 
-        <source-file src="src/FileWriterFromBase64.java" target-dir="src/com/howiepowie/cordova/filePlugin" />     
+        <source-file src="src/android/FileWriterFromBase64.java" target-dir="src/com/howiepowie/cordova/filePlugin" />     
      </platform>         
 </plugin>
