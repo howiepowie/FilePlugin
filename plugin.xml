@@ -22,4 +22,15 @@
         </config-file>
         <source-file src="src/android/FilePlugin.java" target-dir="src/com/howiepowie/cordova/filePlugin" />     
      </platform>         
+     
+     <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="FilePlugin">
+                <param name="ios-package" value="FilePlugin" />
+            </feature>
+        </config-file>
+        <header-file src="src/ios/FilePlugin.h" />
+        <source-file src="src/ios/FilePlugin.m" />
+    </platform>
+
 </plugin>
