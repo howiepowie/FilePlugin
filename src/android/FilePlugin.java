@@ -14,7 +14,7 @@ import android.net.Uri;
 import android.os.Environment;
 import android.util.Base64;
 
-public class FileWriterFromBase64 extends CordovaPlugin {
+public class FilePlugin extends CordovaPlugin {
 	
 	//File operation
 	private final static String WRITE_FILE = "writefile"; 

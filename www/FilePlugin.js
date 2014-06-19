@@ -1,9 +1,9 @@
-var FileWriterFromBase64 = {
+var FilePlugin = {
     createFile: function(data, filepath, successCallback, errorCallback) {
  		cordova.exec(
  			successCallback,
  			errorCallback,
- 			'FileWriterFromBase64',
+ 			'FilePlugin',
  			'writefile',
  			[{
  				"data" : data,
@@ -15,7 +15,7 @@ var FileWriterFromBase64 = {
  		cordova.exec(
  			successCallback,
  			errorCallback,
- 			'FileWriterFromBase64',
+ 			'FilePlugin',
  			'openfile',
  			[{
 				"content_type" : content_type,
@@ -27,7 +27,7 @@ var FileWriterFromBase64 = {
  		cordova.exec(
  			successCallback,
  			errorCallback,
- 			'FileWriterFromBase64',
+ 			'FilePlugin',
  			'deletefile',
  			[{
  				"filepath" : filepath
@@ -38,7 +38,7 @@ var FileWriterFromBase64 = {
  		cordova.exec(
  			successCallback,
  			errorCallback,
- 			'FileWriterFromBase64',
+ 			'FilePlugin',
  			'createdirectory',
  			[{
  				"filepath" : filepath
@@ -49,7 +49,7 @@ var FileWriterFromBase64 = {
  		cordova.exec(
  			successCallback,
  			errorCallback,
- 			'FileWriterFromBase64',
+ 			'FilePlugin',
  			'deletedirectory',
  			[{
  				"filepath" : filepath
@@ -60,10 +60,10 @@ var FileWriterFromBase64 = {
  		cordova.exec(
  			successCallback,
  			errorCallback,
- 			'FileWriterFromBase64',
+ 			'FilePlugin',
  			'externaldirectory',
  			[{}]
  		);
     }
 }
-module.exports = FileWriterFromBase64;
+module.exports = FilePlugin;

@@ -3,24 +3,23 @@
 <plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
            id="com.howiepowie.cordova.filePlugin"
       version="0.1.0">
-    <name>FileWriterFromBase64</name>
+    <name>FilePlugin</name>
     <description>Sample PhoneGap FileWriterFromBase64 Plugin</description>
     <license>MIT</license>
     <keywords>file</keywords>
  
  
-    <js-module src="www/FileWriterFromBase64.js" name="FileWriterFromBase64">
+    <js-module src="www/FilePlugin.js" name="FilePlugin">
         <clobbers target="window.FileWriterFromBase64" />
     </js-module>
  
     <!-- android -->
     <platform name="android">
         <config-file target="res/xml/config.xml" parent="/*">
-            <feature name="FileWriterFromBase64">
-                <param name="android-package" value="com.howiepowie.cordova.filePlugin.FileWriterFromBase64"/>
+            <feature name="FilePlugin">
+                <param name="android-package" value="com.howiepowie.cordova.filePlugin.FilePlugin"/>
             </feature>
         </config-file>
-
-        <source-file src="src/android/FileWriterFromBase64.java" target-dir="src/com/howiepowie/cordova/filePlugin" />     
+        <source-file src="src/android/FilePlugin.java" target-dir="src/com/howiepowie/cordova/filePlugin" />     
      </platform>         
 </plugin>
