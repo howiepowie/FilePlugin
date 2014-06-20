@@ -14,7 +14,7 @@ openFile: function(filepath, content_type, successCallback, errorCallback) {
                  errorCallback,
                  'FilePlugin',
                  'openfile',
-                 [content_type, filepath]
+                 [filepath, content_type]
                  );
 },
 deleteFile: function(filepath, successCallback, errorCallback) {

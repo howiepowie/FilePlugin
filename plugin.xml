@@ -4,13 +4,13 @@
            id="com.howiepowie.cordova.filePlugin"
       version="0.1.0">
     <name>FilePlugin</name>
-    <description>Sample PhoneGap FileWriterFromBase64 Plugin</description>
+    <description>Sample PhoneGap File Plugin</description>
     <license>MIT</license>
     <keywords>file</keywords>
  
  
     <js-module src="www/FilePlugin.js" name="FilePlugin">
-        <clobbers target="window.FileWriterFromBase64" />
+        <clobbers target="window.FilePlugin" />
     </js-module>
  
     <!-- android -->
