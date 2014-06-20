@@ -127,7 +127,7 @@ public class FilePlugin extends CordovaPlugin {
 
 
 	private boolean writefile(String b64data, String filepath, CallbackContext callbackcontext) {
-		byte[] data = Base64.decode(b64data, Base64.DEFAULT);
+		byte[] data = Base64.decode(b64data, 0);
 		
 		File filePath = new File(filepath);
 		FileOutputStream os;
