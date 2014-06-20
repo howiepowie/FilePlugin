@@ -29,22 +29,20 @@ public class FilePlugin extends CordovaPlugin {
 	
 	@Override
 	public boolean execute(String action, JSONArray args, CallbackContext callbackcontext) throws JSONException {
-
-		
-		switch (action) {
-		case WRITE_FILE:
+	
+		if(action.equals(WRITE_FILE))
 			return writefile(args.getString(0), args.getString(1), callbackcontext);
-		case OPEN_FILE:
+		else if(action.equals(OPEN_FILE))
 			return openfile(args.getString(0), args.getString(1), callbackcontext);
-		case DELETE_FILE:
+		else if(action.equals(DELETE_FILE))
 			return deletefile(args.getString(0), callbackcontext);
-		case CREATE_DIRECTORY:
+		else if(action.equals(CREATE_DIRECTORY))
 			return createdirectory(args.getString(0), callbackcontext);
-		case DELETE_DIRECTORY:
+		else if(action.equals(DELETE_DIRECTORY))
 			return deletedirectory(args.getString(0), args.getBoolean(1), callbackcontext);
-		case GET_EXTERNAL_DIRECTORY:
+		else if(action.equals(GET_EXTERNAL_DIRECTORY))
 			return getExternalPath(callbackcontext);
-		default:
+		else {
 			callbackcontext.error("Unknown action");
 			return false;
 		}
