@@ -7,7 +7,6 @@ import org.apache.cordova.CallbackContext;
 import org.apache.cordova.CordovaPlugin;
 import org.json.JSONArray;
 import org.json.JSONException;
-import org.json.JSONObject;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -30,21 +29,22 @@ public class FilePlugin extends CordovaPlugin {
 	
 	@Override
 	public boolean execute(String action, JSONArray args, CallbackContext callbackcontext) throws JSONException {
-		JSONObject arg = args.getJSONObject(0);
+
 		
-		if(action.equals(WRITE_FILE))
-			return writefile(arg.getString("data"), arg.getString("filepath"), callbackcontext);
-		else if(action.equals(OPEN_FILE))
-			return openfile(arg.getString("filepath"),arg.getString("content_type") , callbackcontext);
-		else if(action.equals(DELETE_FILE))
-			return deletefile(arg.getString("filepath"), callbackcontext);
-		else if(action.equals(CREATE_DIRECTORY))
-			return createdirectory(arg.getString("filepath"), callbackcontext);
-		else if(action.equals(DELETE_DIRECTORY))
-			return deletedirectory(arg.getString("filepath"), arg.getBoolean("recursif"), callbackcontext);
-		else if(action.equals(GET_EXTERNAL_DIRECTORY))
+		switch (action) {
+		case WRITE_FILE:
+			return writefile(args.getString(0), args.getString(1), callbackcontext);
+		case OPEN_FILE:
+			return openfile(args.getString(0), args.getString(1), callbackcontext);
+		case DELETE_FILE:
+			return deletefile(args.getString(0), callbackcontext);
+		case CREATE_DIRECTORY:
+			return createdirectory(args.getString(0), callbackcontext);
+		case DELETE_DIRECTORY:
+			return deletedirectory(args.getString(0), args.getBoolean(1), callbackcontext);
+		case GET_EXTERNAL_DIRECTORY:
 			return getExternalPath(callbackcontext);
-		else {
+		default:
 			callbackcontext.error("Unknown action");
 			return false;
 		}
@@ -127,7 +127,7 @@ public class FilePlugin extends CordovaPlugin {
 
 
 	private boolean writefile(String b64data, String filepath, CallbackContext callbackcontext) {
-		byte[] data = Base64.decode(b64data, 0);
+		byte[] data = Base64.decode(b64data, Base64.DEFAULT);
 		
 		File filePath = new File(filepath);
 		FileOutputStream os;
