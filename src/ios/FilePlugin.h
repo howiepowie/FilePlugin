@@ -1,6 +1,6 @@
 #import <Cordova/CDV.h>
 
-@interface FilePlugin : CDVPlugin <UIDocumentInteractionControllerDelegate>
+@interface FilePlugin : CDVPlugin
 
 - (void)writefile:(CDVInvokedUrlCommand*)command;
 

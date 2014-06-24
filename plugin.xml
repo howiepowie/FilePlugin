@@ -31,6 +31,12 @@
         </config-file>
         <header-file src="src/ios/FilePlugin.h" />
         <source-file src="src/ios/FilePlugin.m" />
+        <header-file src="src/ios/TTOpenInAppActivity/TTOpenInAppActivity.h" />
+        <source-file src="src/ios/TTOpenInAppActivity/TTOpenInAppActivity.m" />
+        <resource-file src="src/ios/TTOpenInAppActivity/TTOpenInAppActivity.png" />
+        <resource-file src="src/ios/TTOpenInAppActivity/TTOpenInAppActivity@2x.png" />
+        <resource-file src="src/ios/TTOpenInAppActivity/TTOpenInAppActivity7.png" />
+        <resource-file src="src/ios/TTOpenInAppActivity/TTOpenInAppActivity7@2x.png" />
     </platform>
 
 </plugin>
